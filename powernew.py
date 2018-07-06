@@ -33,7 +33,7 @@ def power(sat):
     cos_values = np.array([])
     for i in range (0,6):
             cos_values = np.append(cos_values,[np.dot(face_vector[i],v_sun_b_m)])
-    cos_values = (-1)*cos_values
+   
     for i in range (0,6):
         if (cos_values[i]<MIN_VAL):
             cos_values[i]=0
