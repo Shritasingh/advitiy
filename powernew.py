@@ -24,6 +24,7 @@ def power(sat):
     area_vector = np.array([v_S1,v_S2,v_S3,v_S4,v_S5,v_S6])
     v_S1_norm = np.linalg.norm(v_S1) 
     face_vector = area_vector/(v_S1_norm)
+    LIGHT=sat.getLight()
     EFFICIENCY = 0.8
     INTENSITY = 1000                                         #in watts per metre square
     MIN_ANGLE = 60
@@ -43,6 +44,8 @@ def power(sat):
     POWER=0
     for i in range (0,6):
         POWER = POWER + EFFICIENCY*INTENSITY*effective_area[i]
+    if (LIGHT=0 or LIGHT=0.5):
+        POWER=0
     return POWER
 
 
