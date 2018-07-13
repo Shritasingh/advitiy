@@ -50,10 +50,12 @@ for i in range(N):
     power_output[i,7] = power_arr[6] #total power at t=T[i]
 power_output[0,8]=energy    
 np.savetxt("power_output.csv", power_output, delimiter=',')
-plt.plot(power_output[:,0],power_output[:,1])
-plt.plot(power_output[:,0],power_output[:,2])
-plt.plot(power_output[:,0],power_output[:,3])
-plt.plot(power_output[:,0],power_output[:,4])
-plt.plot(power_output[:,0],power_output[:,5])
-plt.plot(power_output[:,0],power_output[:,6])
+plt.plot(power_output[:,0],power_output[:,1],label='leading side')
+plt.plot(power_output[:,0],power_output[:,2],label='lagging side')
+plt.plot(power_output[:,0],power_output[:,3],label='anti-sun side')
+plt.plot(power_output[:,0],power_output[:,4],label='sun side')
+plt.plot(power_output[:,0],power_output[:,5],label='nadir')
+plt.plot(power_output[:,0],power_output[:,6],label='zenith')
+plt.legend(bbox_to_anchor=(1,1),bbox_transform=plt.gcf().transFigure)
+plt.grid()
 plt.show()
