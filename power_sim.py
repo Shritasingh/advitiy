@@ -50,3 +50,10 @@ for i in range(N):
     power_output[i,7] = power_arr[6] #total power at t=T[i]
 power_output[0,8]=energy    
 np.savetxt("power_output.csv", power_output, delimiter=',')
+plt.plot(power_output[:,0],power_output[:,1])
+plt.plot(power_output[:,0],power_output[:,2])
+plt.plot(power_output[:,0],power_output[:,3])
+plt.plot(power_output[:,0],power_output[:,4])
+plt.plot(power_output[:,0],power_output[:,5])
+plt.plot(power_output[:,0],power_output[:,6])
+plt.show()
