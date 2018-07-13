@@ -48,11 +48,5 @@ for i in range(N):
     power_output[i,0] = T[i]
     power_output[i,1:7] = power_arr[0:6] #for each side:x,-x,y,-y,z,-z
     power_output[i,7] = power_arr[6] #total power at t=T[i]
-    plt.plot(power_output[i,1],power_output[i,0])
-    plt.plot(power_output[i,2],power_output[i,0])
-    plt.plot(power_output[i,3],power_output[i,0])
-    plt.plot(power_output[i,4],power_output[i,0])
-    plt.plot(power_output[i,5],power_output[i,0])
-    plt.plot(power_output[i,6],power_output[i,0])
 power_output[0,8]=energy    
 np.savetxt("power_output.csv", power_output, delimiter=',')
