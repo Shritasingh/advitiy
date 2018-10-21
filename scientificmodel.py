@@ -5,7 +5,6 @@ import frames as fs
 import constants_1U as constants
 from satellite import Satellite
 
-
 def sm_J2_mag(sat): 
 	v_mag_i=sat.getMag_i()
 	J2data=sat.getJ2Data()
